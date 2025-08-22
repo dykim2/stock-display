@@ -239,14 +239,20 @@ function App() {
         />
       </div>
       <br />
-      {loading ? <h1>Data loading!</h1> : <h1>Stock Price Change Data (%)</h1>}
-      <Chart
-        options={changesOptions.options}
-        series={changesOptions.series}
-        type="bar"
-        width="100%"
-        height={400}
-      />
+      <div className="w-9/10 md:w-19/20 lg:w-full">
+        {loading ? (
+          <h1>Data loading!</h1>
+        ) : (
+          <h1>Stock Price Change Data (%)</h1>
+        )}
+        <Chart
+          options={changesOptions.options}
+          series={changesOptions.series}
+          type="bar"
+          width="100%"
+          height={400}
+        />
+      </div>
       <div
         style={{
           display: "flex",
