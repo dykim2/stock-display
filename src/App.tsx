@@ -53,6 +53,7 @@ function App() {
     }
   }
   async function addStock() {
+    setLoading(true);
     // make a simple text field: add a stock: [field] [button]
     let res: string | null = prompt("what stock would you like to look up?");
     if(res == null || res == ""){
@@ -90,6 +91,7 @@ function App() {
     setStockData(newStockData);
     setChangeData(newChangeData);
     setStockNames(newStockNames);
+    setLoading(false);
   }
   // remove stock too
   function removeStock() {
